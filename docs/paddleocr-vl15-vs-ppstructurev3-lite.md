@@ -172,6 +172,17 @@ paddleocr doc_parser -i D:\OCR\samples\smoke_input.png --save_path D:\OCR\logs\p
 - `PP-StructureV3` 在 `MDPBench Lite` 上阅读顺序略优一点，但表格能力差距比较明显
 - `PaddleOCR-VL-1.5` 的综合精度和跨场景稳定性更好
 
+补充一句很重要：
+
+- 以上表格是这两条路线的正面对比，数值本身没有变化
+- 但在包含全部模型的最新 `lite leaderboard` 里，随着 `MonkeyOCR` 改成完整 parse 接入后重新计分，`PP-StructureV3` 在 `OmniDocBench Lite` 的总榜位置已经从原先的第 `4` 变成了第 `5`
+- 在 `MDPBench Lite` 里，`PP-StructureV3` 仍然是第 `2`
+
+也就是说：
+
+- 如果只比较 `PaddleOCR-VL-1.5 vs PP-StructureV3`，这篇里的主结论不变
+- 如果放回五模型总榜里看，`PP-StructureV3` 在 `OmniDocBench Lite` 的相对位置已经被修正后的 `MonkeyOCR` 反超
+
 ## 5. 这两个方案分别有什么优缺点
 
 ### 5.1 PaddleOCR-VL-1.5 的优点
