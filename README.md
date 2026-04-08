@@ -2,6 +2,19 @@
 
 Benchmark and deployment toolkit for document parsing models on Windows, with unified output formatting and official-rule evaluation for OmniDocBench and MDPBench.
 
+## Start Here
+
+| If you want to... | Go here |
+| --- | --- |
+| understand what this repo contains | [Scope](#scope) |
+| deploy models and prepare the local environment | [README_DEPLOY.md](README_DEPLOY.md) |
+| run the full / long benchmark | `scripts/launch_benchmark_full.cmd` |
+| run the resilient / medium benchmark | `scripts/launch_benchmark_quick_resilient.cmd` |
+| run the lite / short benchmark | `scripts/launch_benchmark_quick_lite.cmd` |
+| inspect built-in sampled manifests | `manifests/resilient/` and `manifests/lite/` |
+| understand the benchmark workflow and outputs | [README_BENCHMARK.md](README_BENCHMARK.md) |
+| check the published lite comparison table | [Lite Benchmark Results](#lite-benchmark-results) |
+
 ## Scope
 
 This repository is for local evaluation of document parsing systems rather than plain text-only OCR. It covers:
