@@ -214,6 +214,25 @@ For `table_teds`, higher is better.
 - Solid second-tier overall: `MinerU`
 - Weakest in this lite run: `MonkeyOCR`
 
+## PP-StructureV3 vs PaddleOCR-VL-1.5
+
+This repository now includes lite benchmark results for both `PP-StructureV3` and `PaddleOCR-VL-1.5`.
+
+### Side-by-Side
+
+| Dataset | Model | Rank Score | Text Block | Reading Order | Table TEDS | Formula |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| OmniDocBench Lite | PaddleOCR-VL-1.5 | 0.9274 | 0.0416 | 0.0361 | 0.9027 | 0.1155 |
+| OmniDocBench Lite | PP-StructureV3 | 0.8610 | 0.1111 | 0.0696 | 0.8234 | 0.1988 |
+| MDPBench Lite | PaddleOCR-VL-1.5 | 0.7690 | 0.2248 | 0.1604 | 0.7988 | 0.3375 |
+| MDPBench Lite | PP-StructureV3 | 0.6734 | 0.3278 | 0.1538 | 0.5142 | 0.3391 |
+
+### Practical Reading
+
+- Choose `PaddleOCR-VL-1.5` when overall document quality matters most, especially for text fidelity, table recovery, and formula-heavy pages.
+- Choose `PP-StructureV3` when you want a more classical document parsing pipeline with stronger engineering-oriented structure output and lower runtime cost on modest GPUs.
+- In this lite run, `PaddleOCR-VL-1.5` is the stronger default choice; `PP-StructureV3` is the lighter alternative rather than the higher-scoring one.
+
 ## Recommended GitHub Description
 
 `Benchmark and deployment toolkit for document parsing models with OmniDocBench and MDPBench evaluation.`
