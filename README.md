@@ -1,6 +1,18 @@
-# OCR Benchmark Pipeline
+# Doc Parsing Benchmark
 
-Windows-first local deployment and benchmark tooling for multiple OCR / OCR-VLM models:
+Benchmark and deployment toolkit for document parsing models on Windows, with unified output formatting and official-rule evaluation for OmniDocBench and MDPBench.
+
+## Scope
+
+This repository is for local evaluation of document parsing systems rather than plain text-only OCR. It covers:
+
+- model deployment with ASCII-only cache paths
+- unified output formatting into `result.md`, `result.json`, and `meta.json`
+- resilient per-page batch execution
+- official scoring wrappers for OmniDocBench and MDPBench
+- leaderboard summarization across multiple models
+
+## Supported Models
 
 - MinerU-2.5-VLM
 - HunyuanOCR
@@ -8,11 +20,12 @@ Windows-first local deployment and benchmark tooling for multiple OCR / OCR-VLM 
 - PaddleOCR-VL-1.5
 - olmOCR2
 
-The repository focuses on three things:
+## Supported Benchmarks
 
-1. local model deployment with ASCII-only cache paths
-2. unified prediction formatting into `result.md / result.json / meta.json`
-3. official-rule scoring for OmniDocBench and MDPBench, plus leaderboard summarization
+- OmniDocBench
+- MDPBench
+
+The pipeline is designed for end-to-end document parsing comparisons, including text blocks, reading order, table recovery, and formula-related metrics exposed by the official scorers.
 
 ## Repository Layout
 
@@ -32,35 +45,36 @@ README_DEPLOY.md
 README_BENCHMARK.md
 ```
 
-## What Is Included
+## Included
 
 - benchmark orchestration scripts
-- resilient per-page batch runners
-- sample manifests used for the lite benchmark
-- deployment and benchmark notes
+- resilient batch runners for multiple models
+- sample manifests for a smaller "lite" benchmark profile
+- deployment notes
+- benchmark workflow notes
 
-## What Is Not Included
+## Not Included
 
 - model weights
 - datasets
+- upstream benchmark repositories
 - local caches
 - virtual environments
-- upstream scorer repos
-- benchmark raw outputs and logs
+- benchmark raw outputs, logs, and intermediate artifacts
 
 ## Expected Local Layout
 
-The scripts assume this repository is the workspace root and that the following folders are created locally when needed:
+The scripts assume this repository is the workspace root. Create these folders locally as needed:
 
 - `datasets/`
 - `repos/`
 - `venvs/`
 - `cache/`
-- `benchmark*` output folders
+- `benchmark/`, `benchmark_quick/`, or other output roots
 
 ## Quick Start
 
-Load the shared local cache environment:
+Load the shared cache environment:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass -Force
@@ -79,20 +93,40 @@ Run the lite benchmark profile:
 .\scripts\launch_benchmark_quick_lite.cmd
 ```
 
-If your benchmark Python is not under `.\venvs\bench\Scripts\python.exe`, set `OCR_BENCH_PYTHON` before running the launcher:
+If your benchmark Python is not under `.\venvs\bench\Scripts\python.exe`, set `OCR_BENCH_PYTHON` first:
 
 ```powershell
 $env:OCR_BENCH_PYTHON = 'D:\path\to\python.exe'
 .\scripts\launch_benchmark_quick_lite.cmd
 ```
 
-## Docs
+## Unified Output Format
+
+Each sample is normalized into:
+
+```text
+<run_root>/<sample_id>/
+  result.md
+  result.json
+  meta.json
+```
+
+- `result.md`: markdown used by end-to-end scorers
+- `result.json`: unified machine-readable prediction record
+- `meta.json`: runtime metadata, success/failure state, and execution info
+
+## Notes
+
+- This repository is currently Windows / PowerShell oriented.
+- Official dataset scorers must be cloned separately under `repos/`.
+- The leaderboard `rank_score` is a local sorting score, not an official benchmark metric.
+- Use each score directory as the source of truth for raw benchmark outputs.
+
+## Documentation
 
 - Deployment notes: [README_DEPLOY.md](README_DEPLOY.md)
 - Benchmark workflow: [README_BENCHMARK.md](README_BENCHMARK.md)
 
-## Notes
+## Recommended GitHub Description
 
-- The current scripts are Windows / PowerShell oriented.
-- Official dataset scorers must be cloned separately under `repos/`.
-- The leaderboard `rank_score` is only a local sort key; use each score directory as the source of truth.
+`Benchmark and deployment toolkit for document parsing models with OmniDocBench and MDPBench evaluation.`
