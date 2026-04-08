@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Virtual environments
+venvs/
+.venv/
+
+# Model caches and temp data
+cache/
+tmp/
+downloads/
+
+# Local datasets and cloned upstream repos
+datasets/
+repos/
+
+# Runtime outputs
+logs/
+benchmark/
+benchmark_quick/
+benchmark_quick_resilient/
+benchmark_quick_lite/
+samples/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.log

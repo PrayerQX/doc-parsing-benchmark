@@ -1,0 +1,970 @@
+{
+  "dataset_name": "omnidocbench",
+  "dataset_root": "D:\\OCR\\datasets\\omnidocbench",
+  "target_pages": 80,
+  "seed": 20260407,
+  "profile": "lite",
+  "sample_count": 80,
+  "samples": [
+    {
+      "sample_id": "PPT_EnglishtoAmericanTransition_page_005",
+      "image_path": "PPT_EnglishtoAmericanTransition_page_005.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\PPT_EnglishtoAmericanTransition_page_005.png",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "PPT2PDF",
+        "has_formula": false,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "PPT_StewartCalcET7e_03_02_page_007",
+      "image_path": "PPT_StewartCalcET7e_03_02_page_007.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\PPT_StewartCalcET7e_03_02_page_007.png",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "PPT2PDF",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "PPT_StewartCalcET7e_04_09_page_018",
+      "image_path": "PPT_StewartCalcET7e_04_09_page_018.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\PPT_StewartCalcET7e_04_09_page_018.png",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "PPT2PDF",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "PPT_ch7_page_021",
+      "image_path": "PPT_ch7_page_021.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\PPT_ch7_page_021.png",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "PPT2PDF",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "PPT_ch7_page_035",
+      "image_path": "PPT_ch7_page_035.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\PPT_ch7_page_035.png",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "PPT2PDF",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "PPT_ch7_page_090",
+      "image_path": "PPT_ch7_page_090.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\PPT_ch7_page_090.png",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "PPT2PDF",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "PPT_lay_linalg5_01_05_page_004",
+      "image_path": "PPT_lay_linalg5_01_05_page_004.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\PPT_lay_linalg5_01_05_page_004.png",
+      "features": {
+        "language": "english",
+        "layout": "complex_or_unknown",
+        "source": "PPT2PDF",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "PPT_linear-algebra primer_page_007",
+      "image_path": "PPT_linear-algebra primer_page_007.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\PPT_linear-algebra primer_page_007.png",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "PPT2PDF",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "book_en_40.Puzzles.and.Problems.in.Probability.and.Mathematical.Statistics,.Schwarz,.Springer,.2008_page_115",
+      "image_path": "book_en_40.Puzzles.and.Problems.in.Probability.and.Mathematical.Statistics,.Schwarz,.Springer,.2008_page_115.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_en_40.Puzzles.and.Problems.in.Probability.and.Mathematical.Statistics,.Schwarz,.Springer,.2008_page_115.png",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "book_en_国外数学教材-数论-Melvyn B. Nathanson—Elementary Methods in Number Theory_0092",
+      "image_path": "book_en_国外数学教材-数论-Melvyn B. Nathanson—Elementary Methods in Number Theory_0092.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_en_国外数学教材-数论-Melvyn B. Nathanson—Elementary Methods in Number Theory_0092.png",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "book_en_国外数学教材-数论-Melvyn B. Nathanson—Elementary Methods in Number Theory_0100",
+      "image_path": "book_en_国外数学教材-数论-Melvyn B. Nathanson—Elementary Methods in Number Theory_0100.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_en_国外数学教材-数论-Melvyn B. Nathanson—Elementary Methods in Number Theory_0100.png",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "book_en_国外数学教材-数论-Melvyn B. Nathanson—Elementary Methods in Number Theory_0119",
+      "image_path": "book_en_国外数学教材-数论-Melvyn B. Nathanson—Elementary Methods in Number Theory_0119.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_en_国外数学教材-数论-Melvyn B. Nathanson—Elementary Methods in Number Theory_0119.png",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "book_en_国外数学教材-数论-Melvyn B. Nathanson—Elementary Methods in Number Theory_0242",
+      "image_path": "book_en_国外数学教材-数论-Melvyn B. Nathanson—Elementary Methods in Number Theory_0242.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_en_国外数学教材-数论-Melvyn B. Nathanson—Elementary Methods in Number Theory_0242.png",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "book_zh_CNASGL0262018_extracted_page_82",
+      "image_path": "book_zh_CNASGL0262018_extracted_page_82.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_zh_CNASGL0262018_extracted_page_82.png",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "book_zh_CNASGL082006_extracted_page_50",
+      "image_path": "book_zh_CNASGL082006_extracted_page_50.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_zh_CNASGL082006_extracted_page_50.png",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "book_zh_DLT10902008_extracted_page_8",
+      "image_path": "book_zh_DLT10902008_extracted_page_8.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_zh_DLT10902008_extracted_page_8.png",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "book_zh_GB115041989_extracted_page_9",
+      "image_path": "book_zh_GB115041989_extracted_page_9.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_zh_GB115041989_extracted_page_9.png",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "book_zh_GB14536.11998_extracted_page_145",
+      "image_path": "book_zh_GB14536.11998_extracted_page_145.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_zh_GB14536.11998_extracted_page_145.png",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "book_zh_GB14930.21994_extracted_page_4",
+      "image_path": "book_zh_GB14930.21994_extracted_page_4.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_zh_GB14930.21994_extracted_page_4.png",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "book_zh_GB149361994_extracted_page_7",
+      "image_path": "book_zh_GB149361994_extracted_page_7.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_zh_GB149361994_extracted_page_7.png",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "book_zh_HGT51022016_extracted_page_12",
+      "image_path": "book_zh_HGT51022016_extracted_page_12.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_zh_HGT51022016_extracted_page_12.png",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "book_zh_TB100782001_extracted_page_21",
+      "image_path": "book_zh_TB100782001_extracted_page_21.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_zh_TB100782001_extracted_page_21.png",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "book",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "book_zh_YDT10512018_extracted_page_30",
+      "image_path": "book_zh_YDT10512018_extracted_page_30.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\book_zh_YDT10512018_extracted_page_30.png",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "color_textbook_教材全解1+1二年级下册英语上海牛津版_page_006",
+      "image_path": "color_textbook_教材全解1+1二年级下册英语上海牛津版_page_006.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\color_textbook_教材全解1+1二年级下册英语上海牛津版_page_006.png",
+      "features": {
+        "language": "mixed_other",
+        "layout": "complex_or_unknown",
+        "source": "colorful_textbook",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "docstructbench_dianzishu_zhongwenzaixian-o.O-61520788.pdf_391",
+      "image_path": "docstructbench_dianzishu_zhongwenzaixian-o.O-61520788.pdf_391.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\docstructbench_dianzishu_zhongwenzaixian-o.O-61520788.pdf_391.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "docstructbench_dianzishu_zhongwenzaixian-o.O-61569751.pdf_155",
+      "image_path": "docstructbench_dianzishu_zhongwenzaixian-o.O-61569751.pdf_155.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\docstructbench_dianzishu_zhongwenzaixian-o.O-61569751.pdf_155.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "docstructbench_dianzishu_zhongwenzaixian-o.O-63677793.pdf_332",
+      "image_path": "docstructbench_dianzishu_zhongwenzaixian-o.O-63677793.pdf_332.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\docstructbench_dianzishu_zhongwenzaixian-o.O-63677793.pdf_332.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "book",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "docstructbench_llm-raw-scihub-o.O-ceat.200407001.pdf_3",
+      "image_path": "docstructbench_llm-raw-scihub-o.O-ceat.200407001.pdf_3.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\docstructbench_llm-raw-scihub-o.O-ceat.200407001.pdf_3.jpg",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "academic_literature",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "docstructbench_llm-raw-scihub-o.O-ceat.200600410.pdf_5",
+      "image_path": "docstructbench_llm-raw-scihub-o.O-ceat.200600410.pdf_5.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\docstructbench_llm-raw-scihub-o.O-ceat.200600410.pdf_5.jpg",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "academic_literature",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "docstructbench_llm-raw-scihub-o.O-j.eswa.2008.01.070.pdf_5",
+      "image_path": "docstructbench_llm-raw-scihub-o.O-j.eswa.2008.01.070.pdf_5.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\docstructbench_llm-raw-scihub-o.O-j.eswa.2008.01.070.pdf_5.jpg",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "academic_literature",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "docstructbench_llm-raw-scihub-o.O-j.physletb.2004.06.101.pdf_3",
+      "image_path": "docstructbench_llm-raw-scihub-o.O-j.physletb.2004.06.101.pdf_3.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\docstructbench_llm-raw-scihub-o.O-j.physletb.2004.06.101.pdf_3.jpg",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "academic_literature",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "docstructbench_llm-raw-scihub-o.O-j.physletb.2004.11.060.pdf_2",
+      "image_path": "docstructbench_llm-raw-scihub-o.O-j.physletb.2004.11.060.pdf_2.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\docstructbench_llm-raw-scihub-o.O-j.physletb.2004.11.060.pdf_2.jpg",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "academic_literature",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "docstructbench_llm-raw-scihub-o.O-s00128-008-9367-z.pdf_4",
+      "image_path": "docstructbench_llm-raw-scihub-o.O-s00128-008-9367-z.pdf_4.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\docstructbench_llm-raw-scihub-o.O-s00128-008-9367-z.pdf_4.jpg",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "academic_literature",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_1993_Problems_1993_page_001",
+      "image_path": "exam_paper_en-file-putnam-archive_1993_Problems_1993_page_001.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_1993_Problems_1993_page_001.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_1995_Solutions_1995s_page_002",
+      "image_path": "exam_paper_en-file-putnam-archive_1995_Solutions_1995s_page_002.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_1995_Solutions_1995s_page_002.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_1996_Solutions_1996s_page_001",
+      "image_path": "exam_paper_en-file-putnam-archive_1996_Solutions_1996s_page_001.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_1996_Solutions_1996s_page_001.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_1997_Solutions_1997s_page_001",
+      "image_path": "exam_paper_en-file-putnam-archive_1997_Solutions_1997s_page_001.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_1997_Solutions_1997s_page_001.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_1997_Solutions_1997s_page_002",
+      "image_path": "exam_paper_en-file-putnam-archive_1997_Solutions_1997s_page_002.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_1997_Solutions_1997s_page_002.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_1999_Solutions_1999s_page_002",
+      "image_path": "exam_paper_en-file-putnam-archive_1999_Solutions_1999s_page_002.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_1999_Solutions_1999s_page_002.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_2002_Solutions_2002s_page_001",
+      "image_path": "exam_paper_en-file-putnam-archive_2002_Solutions_2002s_page_001.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_2002_Solutions_2002s_page_001.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_2002_Solutions_2002s_page_004",
+      "image_path": "exam_paper_en-file-putnam-archive_2002_Solutions_2002s_page_004.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_2002_Solutions_2002s_page_004.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_2005_Solutions_2005s_page_006",
+      "image_path": "exam_paper_en-file-putnam-archive_2005_Solutions_2005s_page_006.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_2005_Solutions_2005s_page_006.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_2006_Solutions_2006s_page_006",
+      "image_path": "exam_paper_en-file-putnam-archive_2006_Solutions_2006s_page_006.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_2006_Solutions_2006s_page_006.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_2008_Solutions_2008s_page_007",
+      "image_path": "exam_paper_en-file-putnam-archive_2008_Solutions_2008s_page_007.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_2008_Solutions_2008s_page_007.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_2009_Solutions_2009s_page_001",
+      "image_path": "exam_paper_en-file-putnam-archive_2009_Solutions_2009s_page_001.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_2009_Solutions_2009s_page_001.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_2011_Solutions_2011s_page_003",
+      "image_path": "exam_paper_en-file-putnam-archive_2011_Solutions_2011s_page_003.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_2011_Solutions_2011s_page_003.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_2013_Problems_2013_page_002",
+      "image_path": "exam_paper_en-file-putnam-archive_2013_Problems_2013_page_002.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_2013_Problems_2013_page_002.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "exam_paper_en-file-putnam-archive_2014_Problems_2014_page_001",
+      "image_path": "exam_paper_en-file-putnam-archive_2014_Problems_2014_page_001.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\exam_paper_en-file-putnam-archive_2014_Problems_2014_page_001.png",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "jiaocai_71434495.pdf_0",
+      "image_path": "jiaocai_71434495.pdf_0.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocai_71434495.pdf_0.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "jiaocai_jiaocai_en_595",
+      "image_path": "jiaocai_jiaocai_en_595.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocai_jiaocai_en_595.jpg",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "colorful_textbook",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_20608808.pdf_0",
+      "image_path": "jiaocaineedrop_20608808.pdf_0.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_20608808.pdf_0.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_33137159.pdf_3",
+      "image_path": "jiaocaineedrop_33137159.pdf_3.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_33137159.pdf_3.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_38247658.pdf_0",
+      "image_path": "jiaocaineedrop_38247658.pdf_0.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_38247658.pdf_0.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_42351289.pdf_1",
+      "image_path": "jiaocaineedrop_42351289.pdf_1.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_42351289.pdf_1.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_chem-203343.pdf_121",
+      "image_path": "jiaocaineedrop_chem-203343.pdf_121.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_chem-203343.pdf_121.jpg",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "colorful_textbook",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_1290",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_1290.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_1290.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "complex_or_unknown",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_1349",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_1349.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_1349.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_1363",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_1363.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_1363.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_1496",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_1496.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_1496.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "colorful_textbook",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_1910",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_1910.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_1910.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "colorful_textbook",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_194",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_194.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_194.jpg",
+      "features": {
+        "language": "mixed_other",
+        "layout": "single",
+        "source": "exam_paper",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_2211",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_2211.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_2211.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_2444",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_2444.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_2444.jpg",
+      "features": {
+        "language": "mixed_other",
+        "layout": "multi",
+        "source": "colorful_textbook",
+        "has_formula": false,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_2540",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_2540.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_2540.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "complex_or_unknown",
+        "source": "exam_paper",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_2718",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_2718.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_2718.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "colorful_textbook",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_3361",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_3361.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_3361.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "colorful_textbook",
+        "has_formula": false,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_467",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_467.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_467.jpg",
+      "features": {
+        "language": "mixed_other",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_541",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_541.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_541.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "colorful_textbook",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_625",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_625.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_625.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "jiaocaineedrop_jiaocai_needrop_en_999",
+      "image_path": "jiaocaineedrop_jiaocai_needrop_en_999.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\jiaocaineedrop_jiaocai_needrop_en_999.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "exam_paper",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "newspaper_2a6b4fa088699701a6fa9ccecfb5c25d_1",
+      "image_path": "newspaper_2a6b4fa088699701a6fa9ccecfb5c25d_1.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\newspaper_2a6b4fa088699701a6fa9ccecfb5c25d_1.jpg",
+      "features": {
+        "language": "english",
+        "layout": "complex_or_unknown",
+        "source": "newspaper",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "newspaper_5e266dfd9c498cab274e12a7b4a75755_1",
+      "image_path": "newspaper_5e266dfd9c498cab274e12a7b4a75755_1.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\newspaper_5e266dfd9c498cab274e12a7b4a75755_1.jpg",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "newspaper",
+        "has_formula": false,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "newspaper_635e4e6a64cf2ccfb2560f9b6dfe24b5_1",
+      "image_path": "newspaper_635e4e6a64cf2ccfb2560f9b6dfe24b5_1.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\newspaper_635e4e6a64cf2ccfb2560f9b6dfe24b5_1.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "complex_or_unknown",
+        "source": "newspaper",
+        "has_formula": false,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "newspaper_Chicago Tribune_0801@magazinesclubnew_page_015",
+      "image_path": "newspaper_Chicago Tribune_0801@magazinesclubnew_page_015.png",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\newspaper_Chicago Tribune_0801@magazinesclubnew_page_015.png",
+      "features": {
+        "language": "english",
+        "layout": "complex_or_unknown",
+        "source": "newspaper",
+        "has_formula": false,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "notes_1ba14cb325bc448f7201b20502ecf2b5_38",
+      "image_path": "notes_1ba14cb325bc448f7201b20502ecf2b5_38.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\notes_1ba14cb325bc448f7201b20502ecf2b5_38.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "note",
+        "has_formula": false,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "notes_f7f010b78016aeebd76e56d9283eb67f_45",
+      "image_path": "notes_f7f010b78016aeebd76e56d9283eb67f_45.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\notes_f7f010b78016aeebd76e56d9283eb67f_45.jpg",
+      "features": {
+        "language": "mixed_other",
+        "layout": "single",
+        "source": "note",
+        "has_formula": false,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "yanbaopptmerge_3aa9b6677e17fd012b0a7a230b9f18db.pdf_1327",
+      "image_path": "yanbaopptmerge_3aa9b6677e17fd012b0a7a230b9f18db.pdf_1327.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\yanbaopptmerge_3aa9b6677e17fd012b0a7a230b9f18db.pdf_1327.jpg",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "yanbaopptmerge_9081a70ff98b3e7d640660a9412c447d.pdf_1287",
+      "image_path": "yanbaopptmerge_9081a70ff98b3e7d640660a9412c447d.pdf_1287.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\yanbaopptmerge_9081a70ff98b3e7d640660a9412c447d.pdf_1287.jpg",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "book",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "yanbaopptmerge_d4fc7cba428625974e93183edfccea73.pdf_89",
+      "image_path": "yanbaopptmerge_d4fc7cba428625974e93183edfccea73.pdf_89.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\yanbaopptmerge_d4fc7cba428625974e93183edfccea73.pdf_89.jpg",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "yanbaopptmerge_yanbaoPPT_120",
+      "image_path": "yanbaopptmerge_yanbaoPPT_120.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\omnidocbench\\images\\yanbaopptmerge_yanbaoPPT_120.jpg",
+      "features": {
+        "language": "mixed_other",
+        "layout": "complex_or_unknown",
+        "source": "PPT2PDF",
+        "has_formula": false,
+        "has_table": false
+      }
+    }
+  ]
+}

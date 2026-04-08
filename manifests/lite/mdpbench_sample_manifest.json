@@ -1,0 +1,298 @@
+{
+  "dataset_name": "mdpbench",
+  "dataset_root": "D:\\OCR\\datasets\\mdpbench",
+  "target_pages": 24,
+  "seed": 20260407,
+  "profile": "lite",
+  "sample_count": 24,
+  "samples": [
+    {
+      "sample_id": "en_book_1",
+      "image_path": "en_book_1.png",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\en_book_1.png",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "book",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "en_book_5_outdoor_underexposure_flashlight-off_top",
+      "image_path": "en_book_5_outdoor_underexposure_flashlight-off_top.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\en_book_5_outdoor_underexposure_flashlight-off_top.JPEG",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "book",
+        "has_formula": false,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "en_exampaper_47_indoor_light_top_bend-in",
+      "image_path": "en_exampaper_47_indoor_light_top_bend-in.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\en_exampaper_47_indoor_light_top_bend-in.JPEG",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "paper",
+        "has_formula": false,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "en_magazine_20_indoor_light_top_bend-in",
+      "image_path": "en_magazine_20_indoor_light_top_bend-in.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\en_magazine_20_indoor_light_top_bend-in.JPEG",
+      "features": {
+        "language": "english",
+        "layout": "complex_or_unknown",
+        "source": "magazine",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "en_newspaper_31_outdoor_light_top_screen",
+      "image_path": "en_newspaper_31_outdoor_light_top_screen.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\en_newspaper_31_outdoor_light_top_screen.JPEG",
+      "features": {
+        "language": "english",
+        "layout": "complex_or_unknown",
+        "source": "newspaper",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "en_note_33_indoor_light_top_bend-out",
+      "image_path": "en_note_33_indoor_light_top_bend-out.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\en_note_33_indoor_light_top_bend-out.JPEG",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "note",
+        "has_formula": false,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "en_paper_11",
+      "image_path": "en_paper_11.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\en_paper_11.jpg",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "academic_literature",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "en_paper_39_outdoor_underexposure_flashlight-on_top_wrinkle_blur",
+      "image_path": "en_paper_39_outdoor_underexposure_flashlight-on_top_wrinkle_blur.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\en_paper_39_outdoor_underexposure_flashlight-on_top_wrinkle_blur.JPEG",
+      "features": {
+        "language": "english",
+        "layout": "multi",
+        "source": "academic_literature",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "en_slide_34_indoor_light_right_wrinkle",
+      "image_path": "en_slide_34_indoor_light_right_wrinkle.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\en_slide_34_indoor_light_right_wrinkle.JPEG",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "ppt",
+        "has_formula": false,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "en_slide_35_outdoor_irregular-light_oblique",
+      "image_path": "en_slide_35_outdoor_irregular-light_oblique.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\en_slide_35_outdoor_irregular-light_oblique.JPEG",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "ppt",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "en_slide_36",
+      "image_path": "en_slide_36.png",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\en_slide_36.png",
+      "features": {
+        "language": "english",
+        "layout": "single",
+        "source": "ppt",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "id_note_41_indoor_light_right_bend-out",
+      "image_path": "id_note_41_indoor_light_right_bend-out.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\id_note_41_indoor_light_right_bend-out.JPEG",
+      "features": {
+        "language": "other",
+        "layout": "complex_or_unknown",
+        "source": "note",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "id_note_42_outdoor_underexposure_flashlight-off_top_bend-in_wrinkle",
+      "image_path": "id_note_42_outdoor_underexposure_flashlight-off_top_bend-in_wrinkle.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\id_note_42_outdoor_underexposure_flashlight-off_top_bend-in_wrinkle.JPEG",
+      "features": {
+        "language": "other",
+        "layout": "complex_or_unknown",
+        "source": "note",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "ko_exampaper_25_indoor_light_top_hold",
+      "image_path": "ko_exampaper_25_indoor_light_top_hold.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\ko_exampaper_25_indoor_light_top_hold.jpg",
+      "features": {
+        "language": "other",
+        "layout": "complex_or_unknown",
+        "source": "paper",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "pt_dictionary_11_indoor_underexposure_flashlight-on_top",
+      "image_path": "pt_dictionary_11_indoor_underexposure_flashlight-on_top.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\pt_dictionary_11_indoor_underexposure_flashlight-on_top.jpg",
+      "features": {
+        "language": "other",
+        "layout": "complex_or_unknown",
+        "source": "dictionary",
+        "has_formula": false,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "th_report_11_indoor_light_shadow_right_wrinkle",
+      "image_path": "th_report_11_indoor_light_shadow_right_wrinkle.png",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\th_report_11_indoor_light_shadow_right_wrinkle.png",
+      "features": {
+        "language": "other",
+        "layout": "complex_or_unknown",
+        "source": "report",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "vi_slide_12_hold_indoor_right_shadow_light",
+      "image_path": "vi_slide_12_hold_indoor_right_shadow_light.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\vi_slide_12_hold_indoor_right_shadow_light.jpg",
+      "features": {
+        "language": "other",
+        "layout": "complex_or_unknown",
+        "source": "slide",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "zh-CHT_magazine_47_indoor_light_top_wrinkle",
+      "image_path": "zh-CHT_magazine_47_indoor_light_top_wrinkle.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\zh-CHT_magazine_47_indoor_light_top_wrinkle.JPEG",
+      "features": {
+        "language": "chinese",
+        "layout": "complex_or_unknown",
+        "source": "magazine",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "zh-CHT_slide_27_indoor_light_shadow_right_wrinkle_bend-in",
+      "image_path": "zh-CHT_slide_27_indoor_light_shadow_right_wrinkle_bend-in.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\zh-CHT_slide_27_indoor_light_shadow_right_wrinkle_bend-in.JPEG",
+      "features": {
+        "language": "chinese",
+        "layout": "complex_or_unknown",
+        "source": "slide",
+        "has_formula": true,
+        "has_table": false
+      }
+    },
+    {
+      "sample_id": "zh_exampaper_35_outdoor_underexposure_flashlight-on_down_wrinkle_bend-in",
+      "image_path": "zh_exampaper_35_outdoor_underexposure_flashlight-on_down_wrinkle_bend-in.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\zh_exampaper_35_outdoor_underexposure_flashlight-on_down_wrinkle_bend-in.JPEG",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "paper",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "zh_newspaper_15_outdoor_light_top_screen_blur",
+      "image_path": "zh_newspaper_15_outdoor_light_top_screen_blur.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\zh_newspaper_15_outdoor_light_top_screen_blur.JPEG",
+      "features": {
+        "language": "chinese",
+        "layout": "complex_or_unknown",
+        "source": "newspaper",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "zh_note_12_indoor_light_oblique_crease",
+      "image_path": "zh_note_12_indoor_light_oblique_crease.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\zh_note_12_indoor_light_oblique_crease.JPEG",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "note",
+        "has_formula": false,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "zh_other_49_indoor_light_top_crease_bend-in",
+      "image_path": "zh_other_49_indoor_light_top_crease_bend-in.JPEG",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\zh_other_49_indoor_light_top_crease_bend-in.JPEG",
+      "features": {
+        "language": "chinese",
+        "layout": "single",
+        "source": "book",
+        "has_formula": true,
+        "has_table": true
+      }
+    },
+    {
+      "sample_id": "zh_textbook_30",
+      "image_path": "zh_textbook_30.jpg",
+      "image_abspath": "D:\\OCR\\datasets\\mdpbench\\MDPBench_img_public\\zh_textbook_30.jpg",
+      "features": {
+        "language": "chinese",
+        "layout": "multi",
+        "source": "book",
+        "has_formula": true,
+        "has_table": false
+      }
+    }
+  ]
+}
