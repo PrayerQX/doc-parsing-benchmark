@@ -12,9 +12,15 @@ def iter_images(input_dir: Path) -> list[Path]:
 
 
 def find_output_markdown(output_dir: Path, sample_id: str) -> Path | None:
-    expected = output_dir / sample_id / f"{sample_id}_text_result.md"
+    expected = output_dir / sample_id / f"{sample_id}.md"
     if expected.exists():
         return expected
+    legacy = output_dir / sample_id / f"{sample_id}_text_result.md"
+    if legacy.exists():
+        return legacy
+    matches = sorted(output_dir.glob(f"**/{sample_id}.md"))
+    if matches:
+        return matches[0]
     matches = sorted(output_dir.glob(f"**/{sample_id}_text_result.md"))
     return matches[0] if matches else None
 
@@ -63,8 +69,6 @@ def main() -> int:
             args.python_exe,
             args.parse_script,
             str(image_path),
-            "-t",
-            "text",
             "-c",
             args.config,
             "-o",
@@ -84,6 +88,7 @@ def main() -> int:
             per_sample[sample_id] = {
                 "status": "ok" if output_path else "failed",
                 "output_path": str(output_path) if output_path else "",
+                "content_list_path": str(output_path.with_name(f"{output_path.stem}_content_list.json")) if output_path else "",
                 "runtime_seconds": round(time.perf_counter() - start, 4),
                 "stdout_tail": tail_text(completed.stdout),
                 "stderr_tail": tail_text(completed.stderr),
@@ -93,6 +98,7 @@ def main() -> int:
             per_sample[sample_id] = {
                 "status": "failed",
                 "output_path": "",
+                "content_list_path": "",
                 "runtime_seconds": round(time.perf_counter() - start, 4),
                 "returncode": exc.returncode,
                 "stdout_tail": tail_text(exc.stdout),

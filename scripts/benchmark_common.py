@@ -141,6 +141,62 @@ def adapter_ppstructurev3(path: Path) -> StandardizedResult:
 
 def adapter_monkey(path: Path) -> StandardizedResult:
     text = normalize_markdown(path.read_text(encoding="utf-8", errors="ignore"))
+    content_list_path = path.with_name(f"{path.stem}_content_list.json")
+    tables: list[dict] = []
+    formulas: list[dict] = []
+    text_blocks: list[dict] = []
+    layout: list[dict] = []
+
+    if content_list_path.exists():
+        try:
+            payload = json.loads(content_list_path.read_text(encoding="utf-8", errors="ignore"))
+            if isinstance(payload, list):
+                for idx, item in enumerate(payload):
+                    if not isinstance(item, dict):
+                        continue
+                    item_type = str(item.get("type", "")).lower()
+                    page_idx = item.get("page_idx")
+                    if item_type == "table":
+                        table_body = item.get("table_body") or ""
+                        tables.append(
+                            {
+                                "index": idx,
+                                "page_idx": page_idx,
+                                "caption": item.get("table_caption") or [],
+                                "footnote": item.get("table_footnote") or [],
+                                "html": table_body,
+                            }
+                        )
+                    elif item_type == "equation":
+                        formulas.append(
+                            {
+                                "index": idx,
+                                "page_idx": page_idx,
+                                "text": item.get("text") or "",
+                                "format": item.get("text_format") or "",
+                            }
+                        )
+                    elif item_type == "text":
+                        text_value = item.get("text") or ""
+                        if text_value:
+                            text_blocks.append(
+                                {
+                                    "index": idx,
+                                    "page_idx": page_idx,
+                                    "text": text_value,
+                                    "text_level": item.get("text_level"),
+                                }
+                            )
+                    layout.append(
+                        {
+                            "index": idx,
+                            "page_idx": page_idx,
+                            "type": item_type,
+                        }
+                    )
+        except json.JSONDecodeError:
+            pass
+
     return StandardizedResult(
         sample_id=_infer_monkey_sample_id(path),
         markdown=text,
@@ -148,7 +204,13 @@ def adapter_monkey(path: Path) -> StandardizedResult:
         raw_output_format="markdown",
         raw_output_path=str(path.resolve()),
         adapter="monkeyocr",
-        extras=None,
+        extras={"content_list_path": str(content_list_path.resolve())} if content_list_path.exists() else None,
+        content={
+            "layout": layout,
+            "tables": tables,
+            "formulas": formulas,
+            "text_blocks": text_blocks,
+        },
     )
 
 

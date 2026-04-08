@@ -200,8 +200,8 @@ So a higher `rank_score` is better, but it is still a local summary score rather
 | 1 | HunyuanOCR | 0.9537 | 0.0534 | 0.0000 | 0.9869 | 0.1186 |
 | 2 | PaddleOCR-VL | 0.9274 | 0.0416 | 0.0361 | 0.9027 | 0.1155 |
 | 3 | MinerU | 0.8967 | 0.0700 | 0.0581 | 0.9189 | 0.2042 |
-| 4 | PP-StructureV3 | 0.8610 | 0.1111 | 0.0696 | 0.8234 | 0.1988 |
-| 5 | MonkeyOCR | 0.4620 | 0.3862 | 0.3492 | 0.0000 | 0.4167 |
+| 4 | MonkeyOCR | 0.8818 | 0.0738 | 0.0803 | 0.8996 | 0.2183 |
+| 5 | PP-StructureV3 | 0.8610 | 0.1111 | 0.0696 | 0.8234 | 0.1988 |
 
 ### MDPBench Lite
 
@@ -211,7 +211,7 @@ So a higher `rank_score` is better, but it is still a local summary score rather
 | 2 | PP-StructureV3 | 0.6734 | 0.3278 | 0.1538 | 0.5142 | 0.3391 |
 | 3 | MinerU | 0.6279 | 0.3214 | 0.2697 | 0.6563 | 0.5536 |
 | 4 | HunyuanOCR | 0.5390 | 0.3581 | 0.3648 | 0.3797 | 0.5006 |
-| 5 | MonkeyOCR | 0.3667 | 0.5079 | 0.4351 | 0.0000 | 0.5901 |
+| 5 | MonkeyOCR | 0.4869 | 0.3931 | 0.3299 | 0.2508 | 0.5800 |
 
 ### Summary
 
@@ -226,7 +226,7 @@ So a higher `rank_score` is better, but it is still a local summary score rather
 - Best on OmniDocBench Lite: `HunyuanOCR`
 - PP-StructureV3 sits between PaddleOCR-VL and the older second-tier models in this lite run
 - Solid second-tier overall: `MinerU`
-- Weakest in this lite run: `MonkeyOCR`
+- `MonkeyOCR` improved materially after switching to full parsing output; it now ranks above `PP-StructureV3` on OmniDocBench Lite, but it is still the weakest overall result across the two lite sets
 
 ## PP-StructureV3 vs PaddleOCR-VL-1.5
 
