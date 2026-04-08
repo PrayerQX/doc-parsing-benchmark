@@ -1,31 +1,45 @@
 # Benchmark Workflow
 
-Note: the original local workspace root was `D:\OCR`. In this repository, replace that path with your own repo root.
+Note: examples below assume this repository is your workspace root. Replace `.\` paths if your local layout differs.
 
 ## Local Assets
 
 Datasets:
 
-- `D:\OCR\datasets\omnidocbench`
-- `D:\OCR\datasets\mdpbench`
+- `.\datasets\omnidocbench`
+- `.\datasets\mdpbench`
 
 Official scorers:
 
-- `D:\OCR\repos\OmniDocBench-main`
-- `D:\OCR\repos\MultimodalOCR-main\MDPBench`
+- `.\repos\OmniDocBench-main`
+- `.\repos\MultimodalOCR-main\MDPBench`
 
 Benchmark venv:
 
-- `D:\OCR\venvs\bench`
+- `.\venvs\bench`
 
 Shared benchmark folders:
 
-- `D:\OCR\benchmark\runs`
-- `D:\OCR\benchmark\exports`
-- `D:\OCR\benchmark\scores`
-- `D:\OCR\benchmark\inputs`
-- `D:\OCR\benchmark\raw`
-- `D:\OCR\benchmark\leaderboards`
+- `.\benchmark\...`
+- `.\benchmark_quick_resilient\...`
+- `.\benchmark_quick_lite\...`
+
+## Benchmark Profiles
+
+The repository keeps three benchmark profiles so people can quickly find the right entrypoint:
+
+| Profile | Intended use | Dataset scope | Manifest location | Launcher | Output root |
+| --- | --- | --- | --- | --- | --- |
+| Full / Long | final or paper-style benchmark | full OmniDocBench + full MDPBench | none | `scripts/launch_benchmark_full.cmd` | `benchmark/` |
+| Resilient / Medium | broader sampled comparison | 150 OmniDocBench pages + 150 MDPBench pages | `manifests/resilient/` | `scripts/launch_benchmark_quick_resilient.cmd` | `benchmark_quick_resilient/` |
+| Lite / Short | quickest comparison run | 80 OmniDocBench pages + 24 MDPBench pages | `manifests/lite/` | `scripts/launch_benchmark_quick_lite.cmd` | `benchmark_quick_lite/` |
+
+Rules of thumb:
+
+- use `Full / Long` when you want the final ranking and can afford the runtime
+- use `Resilient / Medium` when you want a broader sampled benchmark on slower GPUs
+- use `Lite / Short` when you want the fastest reproducible comparison
+- only sampled profiles ship with versioned manifests; the full profile reads directly from the full datasets
 
 ## Standard Output Format
 
@@ -57,12 +71,12 @@ Meaning:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass -Force
-. D:\OCR\scripts\Set-OcrEnv.ps1
+. .\scripts\Set-OcrEnv.ps1
 
-D:\OCR\venvs\bench\Scripts\python.exe D:\OCR\scripts\build_benchmark_manifest.py `
+.\venvs\bench\Scripts\python.exe .\scripts\build_benchmark_manifest.py `
   --dataset-name omnidocbench `
-  --dataset-root D:\OCR\datasets\omnidocbench `
-  --output D:\OCR\benchmark\omnidocbench_manifest.json
+  --dataset-root .\datasets\omnidocbench `
+  --output .\benchmark\omnidocbench_manifest.json
 ```
 
 ## Standardize Raw Model Outputs
@@ -70,14 +84,14 @@ D:\OCR\venvs\bench\Scripts\python.exe D:\OCR\scripts\build_benchmark_manifest.py
 Example for a markdown-style model output folder:
 
 ```powershell
-D:\OCR\venvs\bench\Scripts\python.exe D:\OCR\scripts\standardize_predictions.py `
+.\venvs\bench\Scripts\python.exe .\scripts\standardize_predictions.py `
   --dataset-name mdpbench `
-  --dataset-root D:\OCR\datasets\mdpbench `
+  --dataset-root .\datasets\mdpbench `
   --model-name mineru `
   --adapter mineru `
-  --input-root D:\OCR\raw\mdpbench\mineru `
+  --input-root .\raw\mdpbench\mineru `
   --pattern **\*.md `
-  --output-root D:\OCR\benchmark\runs\mdpbench_mineru
+  --output-root .\benchmark\runs\mdpbench_mineru
 ```
 
 Notes:
@@ -88,9 +102,9 @@ Notes:
 ## Export To Official Markdown Folder
 
 ```powershell
-D:\OCR\venvs\bench\Scripts\python.exe D:\OCR\scripts\export_predictions_to_official.py `
-  --run-root D:\OCR\benchmark\runs\mdpbench_mineru `
-  --export-dir D:\OCR\benchmark\exports\mdpbench_mineru
+.\venvs\bench\Scripts\python.exe .\scripts\export_predictions_to_official.py `
+  --run-root .\benchmark\runs\mdpbench_mineru `
+  --export-dir .\benchmark\exports\mdpbench_mineru
 ```
 
 ## Score With Official Rules
@@ -98,27 +112,27 @@ D:\OCR\venvs\bench\Scripts\python.exe D:\OCR\scripts\export_predictions_to_offic
 ### OmniDocBench
 
 ```powershell
-D:\OCR\venvs\bench\Scripts\python.exe D:\OCR\scripts\score_with_official.py `
+.\venvs\bench\Scripts\python.exe .\scripts\score_with_official.py `
   --dataset-name omnidocbench `
-  --dataset-root D:\OCR\datasets\omnidocbench `
-  --run-root D:\OCR\benchmark\runs\omnidocbench_mineru `
-  --export-dir D:\OCR\benchmark\exports\omnidocbench_mineru `
-  --result-root D:\OCR\benchmark\scores\omnidocbench_mineru `
-  --scorer-root D:\OCR\repos\OmniDocBench-main `
-  --python-exe D:\OCR\venvs\bench\Scripts\python.exe
+  --dataset-root .\datasets\omnidocbench `
+  --run-root .\benchmark\runs\omnidocbench_mineru `
+  --export-dir .\benchmark\exports\omnidocbench_mineru `
+  --result-root .\benchmark\scores\omnidocbench_mineru `
+  --scorer-root .\repos\OmniDocBench-main `
+  --python-exe .\venvs\bench\Scripts\python.exe
 ```
 
 ### MDPBench
 
 ```powershell
-D:\OCR\venvs\bench\Scripts\python.exe D:\OCR\scripts\score_with_official.py `
+.\venvs\bench\Scripts\python.exe .\scripts\score_with_official.py `
   --dataset-name mdpbench `
-  --dataset-root D:\OCR\datasets\mdpbench `
-  --run-root D:\OCR\benchmark\runs\mdpbench_mineru `
-  --export-dir D:\OCR\benchmark\exports\mdpbench_mineru `
-  --result-root D:\OCR\benchmark\scores\mdpbench_mineru `
-  --scorer-root D:\OCR\repos\MultimodalOCR-main\MDPBench `
-  --python-exe D:\OCR\venvs\bench\Scripts\python.exe
+  --dataset-root .\datasets\mdpbench `
+  --run-root .\benchmark\runs\mdpbench_mineru `
+  --export-dir .\benchmark\exports\mdpbench_mineru `
+  --result-root .\benchmark\scores\mdpbench_mineru `
+  --scorer-root .\repos\MultimodalOCR-main\MDPBench `
+  --python-exe .\venvs\bench\Scripts\python.exe
 ```
 
 For `MDPBench`, the wrapper also runs official `tools/calculate_scores.py`.
@@ -127,8 +141,8 @@ For `MDPBench`, the wrapper also runs official `tools/calculate_scores.py`.
 
 Verified with official demo predictions:
 
-- `D:\OCR\benchmark\scores\omnidocbench_demo_end2end`
-- `D:\OCR\benchmark\scores\mdpbench_demo_gemini`
+- `.\benchmark\scores\omnidocbench_demo_end2end`
+- `.\benchmark\scores\mdpbench_demo_gemini`
 
 These runs confirm:
 
@@ -141,19 +155,19 @@ These runs confirm:
 Prepare flat image inputs for one dataset:
 
 ```powershell
-D:\OCR\venvs\bench\Scripts\python.exe D:\OCR\scripts\prepare_benchmark_inputs.py `
+.\venvs\bench\Scripts\python.exe .\scripts\prepare_benchmark_inputs.py `
   --dataset-name omnidocbench `
-  --dataset-root D:\OCR\datasets\omnidocbench `
-  --output-dir D:\OCR\benchmark\inputs\omnidocbench
+  --dataset-root .\datasets\omnidocbench `
+  --output-dir .\benchmark\inputs\omnidocbench
 ```
 
 Run the full benchmark pipeline for all 5 models on a dataset subset:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass -Force
-. D:\OCR\scripts\Set-OcrEnv.ps1
+. .\scripts\Set-OcrEnv.ps1
 
-D:\OCR\venvs\bench\Scripts\python.exe D:\OCR\scripts\run_benchmark_pipeline.py `
+.\venvs\bench\Scripts\python.exe .\scripts\run_benchmark_pipeline.py `
   --datasets omnidocbench `
   --models mineru hunyuanocr monkeyocr paddlevl olmocr2 `
   --limit 5
@@ -162,13 +176,56 @@ D:\OCR\venvs\bench\Scripts\python.exe D:\OCR\scripts\run_benchmark_pipeline.py `
 Run all configured datasets and models:
 
 ```powershell
-D:\OCR\venvs\bench\Scripts\python.exe D:\OCR\scripts\run_benchmark_pipeline.py
+.\venvs\bench\Scripts\python.exe .\scripts\run_benchmark_pipeline.py
+```
+
+## Profile Launch Commands
+
+Full / Long:
+
+```powershell
+.\scripts\launch_benchmark_full.cmd
+```
+
+Resilient / Medium:
+
+```powershell
+.\scripts\launch_benchmark_quick_resilient.cmd
+```
+
+Lite / Short:
+
+```powershell
+.\scripts\launch_benchmark_quick_lite.cmd
+```
+
+If you want your own sampled subset instead of the bundled `resilient` or `lite` manifests:
+
+```powershell
+.\venvs\bench\Scripts\python.exe .\scripts\sample_benchmark_manifest.py `
+  --dataset-name omnidocbench `
+  --dataset-root .\datasets\omnidocbench `
+  --target-pages 120 `
+  --profile lite `
+  --output .\manifests\custom\omnidocbench_sample_manifest.json
+```
+
+Then point the pipeline at that folder:
+
+```powershell
+.\venvs\bench\Scripts\python.exe .\scripts\run_benchmark_pipeline.py `
+  --datasets omnidocbench mdpbench `
+  --models mineru hunyuanocr monkeyocr paddlevl `
+  --manifest-root .\manifests\custom `
+  --use-sampled-manifests
 ```
 
 Leaderboard outputs:
 
-- `D:\OCR\benchmark\leaderboards\leaderboard.csv`
-- `D:\OCR\benchmark\leaderboards\leaderboard.md`
+- `.\benchmark\leaderboards\leaderboard.csv`
+- `.\benchmark\leaderboards\leaderboard.md`
+- `.\benchmark_quick_resilient\leaderboards\leaderboard.csv`
+- `.\benchmark_quick_lite\leaderboards\leaderboard.csv`
 
 Notes:
 

@@ -32,12 +32,18 @@ The pipeline is designed for end-to-end document parsing comparisons, including 
 ```text
 scripts/
   Set-OcrEnv.ps1
+  launch_benchmark_full.cmd
+  launch_benchmark_quick_resilient.cmd
+  launch_benchmark_quick_lite.cmd
   run_benchmark_pipeline.py
   run_*_batch.py
   standardize_predictions.py
   score_with_official.py
   summarize_leaderboard.py
 manifests/
+  resilient/
+    omnidocbench_sample_manifest.json
+    mdpbench_sample_manifest.json
   lite/
     omnidocbench_sample_manifest.json
     mdpbench_sample_manifest.json
@@ -49,7 +55,7 @@ README_BENCHMARK.md
 
 - benchmark orchestration scripts
 - resilient batch runners for multiple models
-- sample manifests for a smaller "lite" benchmark profile
+- built-in manifests for "resilient" and "lite" benchmark profiles
 - deployment notes
 - benchmark workflow notes
 
@@ -70,7 +76,19 @@ The scripts assume this repository is the workspace root. Create these folders l
 - `repos/`
 - `venvs/`
 - `cache/`
-- `benchmark/`, `benchmark_quick/`, or other output roots
+- `benchmark/`, `benchmark_quick_resilient/`, and `benchmark_quick_lite/`
+
+## Benchmark Profiles
+
+The repository exposes three ready-to-find benchmark profiles:
+
+| Profile | Typical use | Dataset scope | Built-in manifest | Launcher | Output root |
+| --- | --- | --- | --- | --- | --- |
+| Full / Long | final benchmark run | full OmniDocBench + full MDPBench | not needed | `scripts/launch_benchmark_full.cmd` | `benchmark/` |
+| Resilient / Medium | broader sampled comparison | 150 OmniDocBench pages + 150 MDPBench pages | `manifests/resilient/` | `scripts/launch_benchmark_quick_resilient.cmd` | `benchmark_quick_resilient/` |
+| Lite / Short | fastest smoke benchmark | 80 OmniDocBench pages + 24 MDPBench pages | `manifests/lite/` | `scripts/launch_benchmark_quick_lite.cmd` | `benchmark_quick_lite/` |
+
+Only the sampled profiles ship with versioned manifests. The full profile reads directly from the full datasets under `datasets/`.
 
 ## Quick Start
 
@@ -87,7 +105,19 @@ Run the main benchmark pipeline:
 .\venvs\bench\Scripts\python.exe .\scripts\run_benchmark_pipeline.py
 ```
 
-Run the lite benchmark profile:
+Run the full / long profile:
+
+```powershell
+.\scripts\launch_benchmark_full.cmd
+```
+
+Run the resilient / medium profile:
+
+```powershell
+.\scripts\launch_benchmark_quick_resilient.cmd
+```
+
+Run the lite / short profile:
 
 ```powershell
 .\scripts\launch_benchmark_quick_lite.cmd
@@ -99,6 +129,8 @@ If your benchmark Python is not under `.\venvs\bench\Scripts\python.exe`, set `O
 $env:OCR_BENCH_PYTHON = 'D:\path\to\python.exe'
 .\scripts\launch_benchmark_quick_lite.cmd
 ```
+
+For custom sampled subsets, generate your own manifest files with `scripts/sample_benchmark_manifest.py` and pass them through `scripts/run_benchmark_pipeline.py --manifest-root ... --use-sampled-manifests`.
 
 ## Unified Output Format
 

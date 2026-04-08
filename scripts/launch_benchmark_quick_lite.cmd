@@ -19,7 +19,7 @@ if not exist "%ROOT%\jobs" mkdir "%ROOT%\jobs"
   --export-root "%ROOT%\exports" ^
   --score-root "%ROOT%\scores" ^
   --leaderboard-root "%ROOT%\leaderboards" ^
-  --manifest-root "%ROOT%\manifests" ^
+  --manifest-root "%REPO_ROOT%\manifests\lite" ^
   --use-sampled-manifests ^
   1>>"%ROOT%\jobs\benchmark_quick_lite_current.out.log" ^
   2>>"%ROOT%\jobs\benchmark_quick_lite_current.err.log"
