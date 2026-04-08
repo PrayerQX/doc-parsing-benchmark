@@ -175,9 +175,23 @@ Each sample is normalized into:
 
 ## Lite Benchmark Results
 
-`rank_score` is a local aggregate used for sorting.  
-For `text_block`, `reading_order`, and `formula`, lower is better.  
-For `table_teds`, higher is better.
+### Score Scale
+
+- `Rank Score`: local aggregate in the range `0.0-1.0`; `1.0` is the best possible score in this repository's leaderboard.
+- `Text Block`: normalized edit-distance style error in the range `0.0-1.0`; `0.0` is ideal.
+- `Reading Order`: normalized edit-distance style error in the range `0.0-1.0`; `0.0` is ideal.
+- `Table TEDS`: structural similarity in the range `0.0-1.0`; `1.0` is ideal.
+- `Formula`: normalized edit-distance style error in the range `0.0-1.0`; `0.0` is ideal.
+
+`rank_score` is computed as the average of:
+
+```text
+(1 - text_block) + (1 - reading_order) + table_teds + (1 - formula)
+-------------------------------------------------------------------
+                               4
+```
+
+So a higher `rank_score` is better, but it is still a local summary score rather than an official single benchmark metric.
 
 ### OmniDocBench Lite
 
@@ -217,6 +231,14 @@ For `table_teds`, higher is better.
 ## PP-StructureV3 vs PaddleOCR-VL-1.5
 
 This repository now includes lite benchmark results for both `PP-StructureV3` and `PaddleOCR-VL-1.5`.
+
+Score ranges are the same as above:
+
+- `Rank Score`: `0.0-1.0`, best possible `1.0`
+- `Text Block`: `0.0-1.0`, ideal `0.0`
+- `Reading Order`: `0.0-1.0`, ideal `0.0`
+- `Table TEDS`: `0.0-1.0`, ideal `1.0`
+- `Formula`: `0.0-1.0`, ideal `0.0`
 
 ### Side-by-Side
 
