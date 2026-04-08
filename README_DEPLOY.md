@@ -109,7 +109,32 @@ Note:
 
 - Download issues were fixed by forcing Hugging Face cache under `D:\OCR\cache\hf` and disabling Xet in `Set-OcrEnv.ps1`.
 
-## 5. olmOCR2
+## 5. PP-StructureV3
+
+Environment:
+
+```powershell
+& D:\OCR\venvs\paddlevl\Scripts\Activate.ps1
+```
+
+Smoke run:
+
+```powershell
+$env:PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK='True'
+paddleocr pp_structurev3 -i D:\OCR\samples\smoke_input.png --save_path D:\OCR\logs\ppstructurev3_smoke --device gpu:0
+```
+
+Verified output:
+
+- `D:\OCR\logs\ppstructurev3_smoke`
+
+Note:
+
+- `PP-StructureV3` currently reuses the `D:\OCR\venvs\paddlevl` environment.
+- `python-docx` is required because the CLI saves `.docx` output in addition to Markdown and JSON.
+- Cache roots should still be loaded through `Set-OcrEnv.ps1` so Paddle assets stay under ASCII-only paths.
+
+## 6. olmOCR2
 
 Environment:
 

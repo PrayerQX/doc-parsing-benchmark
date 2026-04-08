@@ -133,6 +133,12 @@ def adapter_paddlevl(path: Path) -> StandardizedResult:
     return base
 
 
+def adapter_ppstructurev3(path: Path) -> StandardizedResult:
+    base = read_markdown_file(path)
+    base.adapter = "ppstructurev3"
+    return base
+
+
 def adapter_monkey(path: Path) -> StandardizedResult:
     text = normalize_markdown(path.read_text(encoding="utf-8", errors="ignore"))
     return StandardizedResult(
@@ -176,6 +182,7 @@ def adapter_olmocr2(path: Path) -> StandardizedResult:
 ADAPTERS: dict[str, Callable[[Path], StandardizedResult]] = {
     "mineru": adapter_mineru,
     "paddlevl": adapter_paddlevl,
+    "ppstructurev3": adapter_ppstructurev3,
     "monkeyocr": adapter_monkey,
     "hunyuanocr": adapter_hunyuan,
     "olmocr2": adapter_olmocr2,

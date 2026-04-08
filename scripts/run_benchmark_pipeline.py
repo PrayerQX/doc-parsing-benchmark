@@ -27,6 +27,28 @@ CACHE_ENV = {
 }
 
 MODELS = {
+    "ppstructurev3": {
+        "command": [
+            "{bench_python}",
+            str(ROOT / "scripts" / "run_ppstructurev3_batch.py"),
+            "--paddleocr-exe",
+            str(ROOT / "venvs" / "paddlevl" / "Scripts" / "paddleocr.exe"),
+            "--input-dir",
+            "{input_dir}",
+            "--output-dir",
+            "{raw_dir}",
+            "--device",
+            "gpu:0",
+            "--resume",
+            "--summary-json",
+            "{summary_json}",
+        ],
+        "adapter": "ppstructurev3",
+        "pattern": "**/*.md",
+        "backend": "paddleocr-cli",
+        "model_version": "PP-StructureV3",
+        "env": {"PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK": "True"},
+    },
     "mineru": {
         "command": [
             "{bench_python}",

@@ -28,6 +28,7 @@ This repository is for local evaluation of document parsing systems rather than 
 ## Supported Models
 
 - MinerU-2.5-VLM
+- PP-StructureV3
 - HunyuanOCR
 - MonkeyOCR v1.5
 - PaddleOCR-VL-1.5

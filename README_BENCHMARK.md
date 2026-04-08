@@ -61,6 +61,7 @@ Meaning:
 ## Supported Adapters
 
 - `mineru`
+- `ppstructurev3`
 - `hunyuanocr`
 - `monkeyocr`
 - `paddlevl`
