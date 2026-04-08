@@ -127,6 +127,44 @@ Each sample is normalized into:
 - Deployment notes: [README_DEPLOY.md](README_DEPLOY.md)
 - Benchmark workflow: [README_BENCHMARK.md](README_BENCHMARK.md)
 
+## Lite Benchmark Results
+
+`rank_score` is a local aggregate used for sorting.  
+For `text_block`, `reading_order`, and `formula`, lower is better.  
+For `table_teds`, higher is better.
+
+### OmniDocBench Lite
+
+| Rank | Model | Rank Score | Text Block | Reading Order | Table TEDS | Formula |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| 1 | HunyuanOCR | 0.9537 | 0.0534 | 0.0000 | 0.9869 | 0.1186 |
+| 2 | PaddleOCR-VL | 0.9274 | 0.0416 | 0.0361 | 0.9027 | 0.1155 |
+| 3 | MinerU | 0.8967 | 0.0700 | 0.0581 | 0.9189 | 0.2042 |
+| 4 | MonkeyOCR | 0.4620 | 0.3862 | 0.3492 | 0.0000 | 0.4167 |
+
+### MDPBench Lite
+
+| Rank | Model | Rank Score | Text Block | Reading Order | Table TEDS | Formula |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| 1 | PaddleOCR-VL | 0.7690 | 0.2248 | 0.1604 | 0.7988 | 0.3375 |
+| 2 | MinerU | 0.6279 | 0.3214 | 0.2697 | 0.6563 | 0.5536 |
+| 3 | HunyuanOCR | 0.5390 | 0.3581 | 0.3648 | 0.3797 | 0.5006 |
+| 4 | MonkeyOCR | 0.3667 | 0.5079 | 0.4351 | 0.0000 | 0.5901 |
+
+### Summary
+
+| Dataset | Winner | Runner-up | Notes |
+| --- | --- | --- | --- |
+| OmniDocBench Lite | HunyuanOCR | PaddleOCR-VL | HunyuanOCR led on the aggregate score; PaddleOCR-VL stayed very close. |
+| MDPBench Lite | PaddleOCR-VL | MinerU | PaddleOCR-VL was the strongest cross-scene result on this set. |
+
+### Takeaway
+
+- Overall most stable: `PaddleOCR-VL`
+- Best on OmniDocBench Lite: `HunyuanOCR`
+- Solid second-tier overall: `MinerU`
+- Weakest in this lite run: `MonkeyOCR`
+
 ## Recommended GitHub Description
 
 `Benchmark and deployment toolkit for document parsing models with OmniDocBench and MDPBench evaluation.`
